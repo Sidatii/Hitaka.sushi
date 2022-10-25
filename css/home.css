@@ -1,0 +1,244 @@
+@font-face {
+    font-family: "Japan",sans-serif;
+    src: url(../fonts/JAPAN-Light.woff);
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    user-select: none; 
+}
+
+body{
+    background-image: url(../images/assets/ghbar.png);
+    
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between ;
+    padding: 0px 60px;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    margin-left: 0%;
+    
+}
+
+.navbaritems{
+    display: flex;
+    justify-content: flex-start;
+    gap: 80px;
+    padding-right: 30px;
+    font-family: "Japan", sans-serif;
+    color: #D94E4E;
+    list-style-type:none;
+    align-items: center;
+}
+
+.logo{
+    padding: 0px 20px;
+}
+
+.navbaritems .contact button{
+    border: 2px solid #D94E4E;
+    background-color: transparent;
+    padding : 5px 10px;
+    color: #D94E4E;
+    border-radius: 10px;
+    font-family: "Japan", sans-serif;
+    align-items: center;
+
+}
+
+.opening{
+    display: flex;
+    justify-content: space-evenly;
+    flex-basis: 50%;
+    padding: 40px 80px;
+    padding-bottom: 200px;
+    /* background-image: url(../images/opening-bg.png); */
+    position: relative;
+    z-index: 0;
+    background-size: cover;
+}
+
+.opening .optext h1{
+    font-family: "Old Japanese", sans-serif;
+    color: #4E4D66;
+    font-size: 57px;
+    padding: 10px 0px;
+    padding-left: 70px;
+    word-wrap: break-word;
+    width: 90%;
+}
+
+.opening .optext h3{
+    font-family: "Montserrat", sans-serif;
+    color: #868686;
+    font-size: 20px;
+    padding: 10px 0px;
+    width: 90%;
+    padding-left: 70px;
+}
+
+.opening .opening img{
+    width: 80%;
+    position: relative;
+    z-index: 100;
+}
+
+.par1{
+    display: flex;
+    justify-content: space-evenly;
+    flex-basis: 50%;
+    padding: 40px 80px;
+    position: relative;
+    z-index: -1;
+    background-size: cover;
+}
+
+.par1 .par1text h1{
+    font-family: "Old Japanese", sans-serif;
+    color: #4E4D66;
+    font-size: 57px;
+    padding: 10px 0px;
+    padding-left: 70px;
+    word-wrap: break-word;
+    width: 90%;
+}
+
+.par1 .par1text h3{
+    font-family: "Montserrat", sans-serif;
+    color: #868686;
+    font-size: 20px;
+    padding: 10px 0px;
+    width: 90%;
+    padding-left: 70px;
+}
+
+.par1 .par1img img{
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    padding-right: 500px;
+}
+
+
+.par2{
+    display: flex;
+    justify-content: center;
+    padding: 0px 0px;
+}
+
+.par3{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-basis: 50%;
+    padding: 10px 0px;
+    position: relative;
+    z-index: -1;
+    background-size: cover;
+}
+
+.par3 .par3text{
+    padding-top: 0px 0px;
+}
+
+.par3 .par3text h1{
+    font-family: "Old Japanese", sans-serif;
+    color: #4E4D66;
+    font-size: 57px;
+    padding: 0px 0px;
+    padding-left: 90px;
+    word-wrap: break-word;
+    width: 90%;
+}
+
+.par3 .par3text h3{
+    font-family: "Montserrat", sans-serif;
+    color: #868686;
+    font-size: 20px;
+    padding: 10px 0px;
+    width: 90%;
+    padding-left: 90px;
+}
+.par3 .par3img{
+    width: 80vw;
+}
+
+.par3 .par3img img{
+    width: 100%;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    position: relative;
+    z-index: 1;
+    align-items: center;
+}
+
+.discover {
+    display: flex;
+    justify-content: center;
+    padding: 80px 20px;
+
+}
+
+.discover button{
+    border: 2px solid #D94E4E;
+    background-color: transparent;
+    padding : 10px 20px;
+    color: #D94E4E;
+    border-radius: 10px;
+    font-family: "Monserrat", sans-serif;
+    align-items: center;
+    font-weight: bold;
+    font-size: 17;
+}
+
+.footer1{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+    align-items: center;
+    padding: 40px 20px;
+    font-size: 20px;
+}
+
+.footer1 li{
+    list-style-type: none;
+}
+
+.footer1 .icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+    width: 5%;
+}
+
+.footer1 .links{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 40px;
+    align-items: flex-start;
+
+}
+
+.footer1 ul{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: flex-start;
+    color: aliceblue;
+    font-family: "Monserrat", sans-serif;
+}
+
+.all-rights{
+    display: flex;
+    color: aliceblue;
+    justify-content: center;
+    font-family: "Monserrat", sans-serif;
+    padding-bottom: 5px;
+}
