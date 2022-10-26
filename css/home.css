@@ -37,6 +37,11 @@ body{
     align-items: center;
 }
 
+.navbaritems a{
+    text-decoration: none;
+    color: #D94E4E;
+}
+
 .logo{
     padding: 0px 20px;
 }
@@ -92,11 +97,10 @@ body{
 .par1{
     display: flex;
     justify-content: space-evenly;
-    flex-basis: 50%;
-    padding: 40px 80px;
+    /* flex-basis: 50%; */
+    /* padding: 40px 80px; */
     position: relative;
-    z-index: -1;
-    background-size: cover;
+    /* background-size: cover; */
 }
 
 .par1 .par1text h1{
@@ -168,8 +172,19 @@ body{
 .par3 .par3img{
     width: 80vw;
 }
+.par3 .par3img1{
+    width: 80vw;
+}
 
 .par3 .par3img img{
+    width: 100%;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    position: relative;
+    z-index: 1;
+    align-items: center;
+}
+.par3 .par3img1 img{
     width: 100%;
     margin: 0px 0px;
     padding: 0px 0px;
@@ -242,3 +257,328 @@ body{
     font-family: "Monserrat", sans-serif;
     padding-bottom: 5px;
 }
+
+
+
+/* ABout page $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+
+.h1{
+    display: flex;
+    justify-content: center;
+    font-family: "Old Japanese", sans-serif;
+    color:#4E4D66;
+    font-size: 30px;
+}
+
+
+
+/* Contact page $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+.op-contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    gap: 50px;
+    align-items: center;
+    padding: 40px 40px;
+}
+
+.reach{
+    display: flex;
+    justify-content: center;
+    font-family: "Old Japanese", sans-serif;
+    color:#4E4D66;
+    font-size: 30px;
+    /* padding: 70px 40px; */
+}
+
+.contenaire1 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 16px 0;
+    border: 0;
+    background: #D94E4E;
+    padding: 20px 10px;
+    outline: none;
+    border-radius: 10px;
+    padding: 0px;
+
+}
+
+
+.fst{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* width: auto; */
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-self: stretch;
+    
+    
+}
+
+.details label{
+    margin: 10px 0px 5px 0px;
+    width: 300px;
+    font-family: "Monserrat", sans-serif;
+    color: aliceblue;
+}
+.details input{
+    font-family: "Monserrat", sans-serif;
+}
+
+.message label{
+    margin: 10px 0px 5px 0px;
+    font-family: "Monserrat", sans-serif;
+    color: aliceblue;
+}
+
+
+
+
+
+@media (max-width: 700px){
+
+    .fst{
+        display: flex;
+        flex-direction: column;
+        padding: 10px 10px;
+    }
+    .message{
+        display: flex;
+        width: fit-content;
+    }
+
+    .footer1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .links div{
+        align-self:  center;
+        align-content: center ;
+        width: 200px;
+        word-wrap: normal;
+    }
+
+    .h1{
+        padding: 50px;
+    }
+
+    .h1 h1{
+        font-size: 40px;
+    }
+
+    .opening{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-size: contain;
+        padding: 10px 10px;
+        position: relative;
+        width: 90%;
+        height: auto;
+        z-index: 10;
+        
+    }
+    .overlay {
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        opacity: 0.6;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    .opening .optext {
+        position: relative;
+        z-index: 10;
+        width: 90%;
+
+    }
+    .opening .opimages {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 10;
+    
+
+    }
+    
+
+    .opening .optext h1{
+        font-size: 35px;
+        padding-left: 0px;
+        flex-wrap: wrap;
+    }
+    .opening .optext h3{
+        font-size: 15px;
+        padding-left: 0px;
+        flex-wrap: wrap;
+    }
+
+    .opening .opimages .img-distr img{
+        width: 200px;
+        
+    }
+
+    .par1{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .par1img{
+        width: 200px;
+        padding-top: 30px;
+    }
+   
+
+    .par1 .par1text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* padding: 10px 10px; */
+        margin: 0px;
+        width: 90%;
+        padding-left: 0px;
+        flex-wrap: wrap;
+    }
+
+    .par1 .par1text h1{
+        font-size: 35px;
+        padding-left: 0px;
+        flex-wrap: wrap;
+    }
+    .par1 .par1text h3{
+        font-size: 15px;
+        padding-left: 0px;
+        flex-wrap: wrap;
+    }
+
+    .par2{
+        display: none;
+    }
+
+    .par3{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .par3img{
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+    .par3 .par3img img{
+        width: 200px;
+    }
+
+    .par3 .par3img1 {
+        display: flex;
+        align-items: flex-end;
+        justify-content: end;
+        padding-right: 0px;
+        
+    }
+    .par3 .par3img1 img{
+        width: 200px;
+    }
+
+
+    .par3 .par3text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 10px;
+        margin: 0px;
+        width: 90%;
+        padding-left: 0;
+    }
+
+    .par3 .par3text h1{
+        font-size: 35px;
+        padding-left: 0px;
+        flex-wrap: wrap;
+    }
+    .par3 .par3text h3{
+        font-size: 15px;
+        padding-left: 0px;
+        flex-wrap: wrap;
+    }
+
+
+}
+
+ .message{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-self: stretch;
+}
+
+.message textarea{
+    resize: none;
+    height: 120px;
+    border-radius: 6px;
+    width: 300px;
+}
+
+.snd {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.snd input{
+    display: flex;
+    justify-content: center;
+    padding: 5px 10px;
+    font-weight:600;
+    font-family: "Motserrat", sans-serif;
+    background:white;
+    border: none;
+    border-radius: 10px;
+    color:#D94E4E;
+
+
+}
+
+.details input{
+    height: 30px;
+    border-radius: 6px;
+    border: transparent;
+    width: 100%;
+    
+}
+
+.footer .logof img{
+    width: 150px;
+}
+
