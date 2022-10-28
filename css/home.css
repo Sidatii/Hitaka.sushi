@@ -49,21 +49,34 @@ body{
     align-items: center;
 }
 
-.navbaritems li:hover{
-   background-color: #D94E4E;
-   padding: 5px 13px;
-   border-radius: 20px;
-}
-.navbaritems li a:hover{
-    color: aliceblue;
-    z-index: 200;
+.navbaritems li{
+    padding: 5px 13px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    
  }
 
-
-.navbaritems a{
+ .navbaritems a{
     text-decoration: none;
     color: #D94E4E;
+    padding: 5px 13px;
+    border-radius: 20px;
+    border: 2px solid transparent;
 }
+
+
+.navbaritems a:hover{
+   border-radius: 20px;
+   border-color: #D94E4E;
+   background-color: #D94E4E;
+   color: aliceblue;
+}
+/* .navbaritems li a:hover{
+    color: aliceblue;
+    z-index: 200;
+ } */
+
+
 
 .logo{
     padding: 0px 20px;
@@ -414,7 +427,7 @@ body{
         justify-content: center;
         align-items: center;
         background-size: contain;
-        /* padding: 10px 10px; */
+        padding: 10px 10px;
         position: relative;
         width: 90%;
         height: auto;
@@ -578,7 +591,7 @@ body{
         padding: 0px 0px;
     }
     .navbar ul li{
-        padding: 20px 0px;
+        margin: 30px 0px;
         color: aliceblue;
         
     }
@@ -639,10 +652,10 @@ body{
 }
 
 /*#########################################################################################*/
-body, body::before, body::after {
+/* body, body::before, body::after {
     font-family: 'Monserrat', sans-serif;
   }
-  
+   */
   .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
