@@ -6,7 +6,7 @@
 *{
     padding: 0px;
     margin: 0px;
-    user-select: none; 
+    /* user-select: none;  */
 }
 
 body{
@@ -16,13 +16,13 @@ body{
 
 .navbar {
     display: flex;
-    align-items: center;
-    gap: 20px;
+    justify-content: center;
+    gap: 10px;
     justify-content: space-between ;
     padding: 0px 60px;
     padding-top: 20px;
     padding-bottom: 60px;
-    margin-left: 0%;
+    /* margin-left: 0%; */
     
 }
 
@@ -381,7 +381,7 @@ body{
 
 
 
-@media (max-width: 700px){
+@media (max-width: 768px){
 
     .fst{
         display: flex;
@@ -427,9 +427,9 @@ body{
         justify-content: center;
         align-items: center;
         background-size: contain;
-        /* padding: 10px 10px; */
+        padding: 10px 10px;
         position: relative;
-        width: 90%;
+        width: 94%;
         height: auto;
         z-index: 10;
         
@@ -663,6 +663,7 @@ body{
     align-items: flex-start;
     background-color: #E97171;
     padding: 1em;
+    margin-bottom: 1em;
   }
   
   .card {
@@ -691,22 +692,23 @@ body{
   }
   
   .card-header.card-image > img {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    max-height: 400px;
+    max-height: 300px;
     aspect-ratio: 16 / 9;
     object-fit: cover;
     object-position: center;
     transition: 200ms transform ease-in-out;
+    padding: 10px 10px;
   }
   
   .card:hover > .card-header.card-image > img {
     transform: scale(1.025);
   }
 
-  .prd-info{
-    
-  }
+ 3286 */
   
   .card-name {
     font-size: 1.5rem;
@@ -726,6 +728,8 @@ body{
     font-size: 1.5rem;
     padding: 0 var(--padding);
     text-align: center;
+    color: #3C38A6;
+    font-family: "Monserrat", sans-serif;
   }
   
   .btn {
@@ -735,6 +739,7 @@ body{
     padding: .5em .75em;
     border-radius: .25em;
     cursor: pointer;
+    font-family: "Monserrat", sans-serif;
   }
   
   .btn:hover, .btn:focus {
