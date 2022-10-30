@@ -656,9 +656,17 @@ body{
     font-family: 'Monserrat', sans-serif;
   }
    */
-  .card-grid {
+.order-box{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+   }
+  .card-grid {
+    grid-area: 1 / 1 / 6 / 10;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 1rem;
     align-items: flex-start;
     background-color: #E97171;
@@ -680,15 +688,19 @@ body{
   }
   
   .card-header {
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     padding: var(--padding);
     padding-bottom: 0;
     margin-bottom: .5rem;
+    font-family: 'Monserrat', sans-serif;
   }
   
   .card-header.card-image {
+    display: flex;
+    justify-content: center;
     padding: 0;
     overflow: hidden;
+    padding: 10px 10px;
   }
   
   .card-header.card-image > img {
@@ -696,25 +708,38 @@ body{
     justify-content: center;
     align-items: center;
     width: 100%;
+    /* border: 1px solid #D94E4E; */
     max-height: 300px;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 10 / 7;
     object-fit: cover;
+    height: 100px;
+    width: 120px;
     object-position: center;
     transition: 200ms transform ease-in-out;
-    padding: 10px 10px;
+    
   }
   
   .card:hover > .card-header.card-image > img {
     transform: scale(1.025);
   }
 
- 3286 */
   
   .card-name {
-    font-size: 1.5rem;
+    font-size: 1.5em;
     padding: 0 var(--padding);
     text-align: center;
-    
+    font-family: "Monserrat", sans-serif;
+    margin-bottom: 10px;
+  }
+
+  .disc{
+    display: flex;
+    padding: 0px 10px;
+    align-items: center;
+    font-size: 1em;
+    font-family: "Monserrat", sans-serif;
+    color: #868686;
+    padding-bottom: 10px;
   }
   
   .card-footer {
@@ -740,6 +765,9 @@ body{
     border-radius: .25em;
     cursor: pointer;
     font-family: "Monserrat", sans-serif;
+    border: 2px solid #D94E4E;
+    background-color: transparent;
+    border-radius: 10px;
   }
   
   .btn:hover, .btn:focus {
@@ -759,4 +787,62 @@ body{
   
   .btn + .btn {
     margin-left: .25rem;
+  }
+
+  .panel{
+    grid-area: 1 / 10 / 4 / 13;
+    /* display: none; */
+    background-color: #D94E4E;
+  }
+
+  @media (max-width: 490px){
+    .card {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+        "img name name" 
+        "img disc disc"
+        "img btn price" ;
+        justify-content: space-around;
+        padding: 10px 10px;
+    }
+
+    .card-image{
+        grid-area: img;
+        width: 100px;
+        height: 100px;
+        /* aspect-ratio:inherit; */
+    }
+    .card-name{
+        display: flex;
+        grid-area: name;
+        align-self: flex-end;
+        margin-bottom: 0px;
+        padding-left: 10px;
+
+    }
+    .disc{
+        grid-area: disc;
+        display: flex;
+        justify-content: center;
+        
+    }
+    .price{
+        grid-area: price;
+        display: flex;
+        align-items: center;
+    }
+    .card-footer{
+        grid-area: btn;
+        margin-top: 0em;
+        padding: 10px;
+    }
+  }
+
+  @media (max-width: 370){
+    .card-name{
+        font-family: 'Motserrat', sans-serif;
+        font-size: 12vw;
+    }
   }
