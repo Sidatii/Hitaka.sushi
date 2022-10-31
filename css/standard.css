@@ -17,12 +17,11 @@ body{
 .navbar {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    justify-content: space-between ;
-    padding: 0px 60px;
+    /* gap: 10px; */
+    justify-content: space-between;
+    /* padding: 0px 60px; */
     padding-top: 20px;
     padding-bottom: 60px;
-    /* margin-left: 0%; */
     
 }
 
@@ -41,7 +40,7 @@ body{
 .navbaritems{
     display: flex;
     justify-content: flex-start;
-    gap: 80px;
+    gap: 30px;
     padding-right: 30px;
     font-family: "Japan", sans-serif;
     color: #D94E4E;
@@ -94,7 +93,6 @@ body{
     flex-basis: 50%;
     padding: 40px 80px;
     padding-bottom: 200px;
-    /* background-image: url(../images/opening-bg.png); */
     position: relative;
     z-index: 0;
     background-size: cover;
@@ -309,41 +307,34 @@ body{
 .op-contact{
     display: flex;
     flex-direction: column;
+    justify-self: center;
     justify-content: space-between;
-    padding-bottom: 30px;
+    width: 100%;
+    margin-bottom: 30px;
     gap: 50px;
     align-items: center;
-    padding: 40px 40px;
+    padding: 40px 0px;
+    
+
 }
 
 .reach{
     display: flex;
     justify-content: center;
+    text-align: center;
     font-family: "Old Japanese", sans-serif;
     color:#4E4D66;
     font-size: 30px;
-    /* padding: 70px 40px; */
+    padding: 0px 0px;
 }
 
-.fst-header{
-    font-size: 40px;
-}
-
-.contenaire1 {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 16px 0;
-    border: 0;
-    background: #D94E4E;
-    padding: 20px 10px;
-    outline: none;
+form{
+    background-color: #D94E4E;
     border-radius: 10px;
-    padding: 0px;
-
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
-
 
 .fst{
     display: flex;
@@ -369,240 +360,13 @@ body{
 }
 .details input{
     font-family: "Monserrat", sans-serif;
+    padding-left: 10px;
 }
 
 .message label{
     margin: 10px 0px 5px 0px;
     font-family: "Monserrat", sans-serif;
     color: aliceblue;
-}
-
-
-
-
-
-@media (max-width: 768px){
-
-    .fst{
-        display: flex;
-        flex-direction: column;
-        padding: 10px 10px;
-    }
-    .message{
-        display: flex;
-        width: fit-content;
-    }
-
-    .footer1{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .links {
-        display: flex;
-        flex-direction: column;
-        justify-self: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    .links div{
-        align-self:  center;
-        align-content: center ;
-        width: 200px;
-        word-wrap: normal;
-    }
-
-    .h1{
-        padding: 50px;
-    }
-
-    .h1 h1{
-        font-size: 40px;
-    }
-
-    .opening{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-size: contain;
-        padding: 10px 10px;
-        position: relative;
-        width: 94%;
-        height: auto;
-        z-index: 10;
-        
-    }
-    .overlay {
-        width: 100%;
-        height: 100%;
-        background-color: white;
-        opacity: 0.6;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 0;
-    }
-
-    .opening .optext {
-        position: relative;
-        z-index: 10;
-        width: 90%;
-
-    }
-    .opening .opimages {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        z-index: 10;
-    }
-    
-
-    .opening .optext h1{
-        font-size: 35px;
-        padding-left: 0px;
-        flex-wrap: wrap;
-    }
-    .opening .optext h3{
-        font-size: 15px;
-        padding-left: 0px;
-        flex-wrap: wrap;
-    }
-
-    .opening .opimages .img-distr img{
-        width: 200px;
-        
-    }
-
-    .par1{
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-        
-    }
-
-    .par1img{
-        width: 200px;
-        padding-top: 30px;
-    }
-   
-
-    .par1 .par1text{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        /* padding: 10px 10px; */
-        margin: 0px;
-        width: 90%;
-        padding-left: 0px;
-        flex-wrap: wrap;
-    }
-
-    .par1 .par1text h1{
-        font-size: 35px;
-        padding-left: 0px;
-        flex-wrap: wrap;
-    }
-    .par1 .par1text h3{
-        font-size: 15px;
-        padding-left: 0px;
-        flex-wrap: wrap;
-    }
-
-    .par2{
-        display: none;
-    }
-
-    .par3{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .par3img{
-        display: flex;
-        padding-top: 30px;
-        align-items: center;
-        justify-content: center;
-    }
-    .par3 .par3img img{
-        width: 200px;
-    }
-
-    .par3 .par3img1 {
-        display: flex;
-        align-items: flex-end;
-        justify-content: end;
-        padding-right: 0px;
-        
-    }
-    .par3 .par3img1 img{
-        width: 200px;
-    }
-
-
-    .par3 .par3text{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 10px 10px;
-        margin: 0px;
-        width: 90%;
-        padding-left: 0;
-    }
-
-    .par3 .par3text h1{
-        font-size: 35px;
-        padding-left: 0px;
-        flex-wrap: wrap;
-    }
-    .par3 .par3text h3{
-        font-size: 15px;
-        padding-left: 0px;
-        flex-wrap: wrap;
-    }
-
-    .fst-header{
-        font-size: 30px;
-    }
-
-
-}
-
-@media (max-width: 800px){
-    .navbar{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 10px 10px;
-        padding-bottom: 10px;
-    }
-    .navbar .navbaritems{
-        display: block;
-        align-items: center;
-        text-align: center;
-        /* background-color: #D94E4E; */
-        border-radius: 10px;
-        color: aliceblue;
-        padding: 0px 0px;
-    }
-    .navbar ul li{
-        margin: 30px 0px;
-        color: aliceblue;
-        
-    }
-    .navbar .respo {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-    }
-    .navbar .respo .toggle{
-        display: flex;
-    }
 }
 
  .message{
@@ -617,6 +381,8 @@ body{
     height: 120px;
     border-radius: 6px;
     width: 300px;
+    padding-left: 10px;
+    padding-top: 4px;
 }
 
 .snd {
@@ -652,16 +418,12 @@ body{
 }
 
 /*#########################################################################################*/
-/* body, body::before, body::after {
-    font-family: 'Monserrat', sans-serif;
-  }
-   */
 .order-box{
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+grid-template-columns: repeat(12, 1fr);
+grid-template-rows: repeat(5, 1fr);
+grid-column-gap: 6px;
+grid-row-gap: 3px;
    }
   .card-grid {
     grid-area: 1 / 1 / 6 / 10;
@@ -795,54 +557,99 @@ body{
     background-color: #D94E4E;
   }
 
-  @media (max-width: 490px){
-    .card {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        grid-template-rows: auto auto auto;
-        grid-template-areas: 
-        "img name name" 
-        "img disc disc"
-        "img btn price" ;
-        justify-content: space-around;
-        padding: 10px 10px;
-    }
+  
 
-    .card-image{
-        grid-area: img;
-        width: 100px;
-        height: 100px;
-        /* aspect-ratio:inherit; */
-    }
-    .card-name{
-        display: flex;
-        grid-area: name;
-        align-self: flex-end;
-        margin-bottom: 0px;
-        padding-left: 10px;
-
-    }
-    .disc{
-        grid-area: disc;
-        display: flex;
-        justify-content: center;
-        
-    }
-    .price{
-        grid-area: price;
-        display: flex;
-        align-items: center;
-    }
-    .card-footer{
-        grid-area: btn;
-        margin-top: 0em;
-        padding: 10px;
-    }
+  .cardx {
+    --padding: 1rem;
+    background: white;
+    border: 1px solid #777;
+    border-radius: .25rem;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .cardx.cardx-shadow {
+    border: none;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .2);
+  }
+  
+  .cardx-header {
+    /* font-size: 1.5rem; */
+    padding: var(--padding);
+    padding-bottom: 0;
+    margin-bottom: .5rem;
+    font-family: 'Monserrat', sans-serif;
   }
 
-  @media (max-width: 370){
-    .card-name{
-        font-family: 'Motserrat', sans-serif;
-        font-size: 12vw;
-    }
-  }
+  .cardx {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "img name name" 
+    "img disc disc"
+    "img btn price" ;
+    justify-content: space-around;
+    padding: 10px 10px;
+    gap: 10px;
+    font-family: 'Monserrat', sans-serif;
+}
+
+.cardx-image{
+    grid-area: img;
+    width: 100px;
+    height: 100px;
+    /* aspect-ratio:inherit; */
+}
+.cardx-header.cardx-image > img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 300px;
+    aspect-ratio: 10 / 7;
+    object-fit: cover;
+    height: 100px;
+    width: 120px;
+    object-position: center;
+    transition: 200ms transform ease-in-out;
+}
+.cardx-name{
+    display: flex;
+    grid-area: name;
+    align-self: flex-end;
+    margin-bottom: 0px;
+    padding-left: 10px;
+}
+.discx{
+    grid-area: disc;
+    display: flex;
+    justify-content: center;
+    color: #868686;
+    
+}
+.pricex{
+    grid-area: price;
+    display: flex;
+    align-items: center;
+    font-family: 'Monserrat', sans-serif;
+    color: #3C38A6;
+}
+.cardx-footer{
+    display: flex;
+    justify-content: center;
+    /* background-color: #868686; */
+    border: 1px solid #777;
+    border-radius: 10px;
+    gap: 10px;
+    grid-area: btn;
+    margin-top: 0em;
+    padding: 10px;
+    width: fit-content;
+    font-family: 'Motserrat', sans-serif;
+}
+
+.cardx-footer i{
+    color: #3C38A6;
+    cursor: pointer;
+}
