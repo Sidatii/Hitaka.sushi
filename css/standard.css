@@ -419,11 +419,8 @@ form{
 
 /*#########################################################################################*/
 .order-box{
-    display: grid;
-grid-template-columns: repeat(12, 1fr);
-grid-template-rows: repeat(5, 1fr);
-grid-column-gap: 6px;
-grid-row-gap: 3px;
+    display: flex;
+    flex-direction: column;
    }
   .card-grid {
     grid-area: 1 / 1 / 6 / 10;
@@ -554,10 +551,43 @@ grid-row-gap: 3px;
   .panel{
     grid-area: 1 / 10 / 4 / 13;
     /* display: none; */
-    background-color: #D94E4E;
+    background-color:#E97171;
+    border-radius: .5rem;
+    padding: 10px 10px;
+    max-width: 300px;
+    align-self: center;
   }
 
-  
+  .mycard{
+    font-family: 'Monserrat', sans-serif;
+    display: flex;
+    background-color: aliceblue;
+    padding: 5px 10px;
+    border-radius: 10px;
+    justify-content: center;
+    margin-bottom: 10px;
+    color:#3C38A6;
+    font-weight: bold;
+    border: 1px solid white;
+  }
+  .confirmation{
+    display: flex;
+    justify-content: center;
+  }
+.confirmation input{
+    background-color: transparent;
+    padding: 5px 10px;
+    font-family: 'Monserrat', sans-serif;
+    color: aliceblue;
+    border: 1px solid white;
+    align-items: center;
+    color: #4E4D66;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: 'Monserrat', sans-serif;
+}
 
   .cardx {
     --padding: 1rem;
@@ -566,6 +596,7 @@ grid-row-gap: 3px;
     border-radius: .25rem;
     overflow: hidden;
     text-align: center;
+    margin-bottom: 10px;
   }
   
   .cardx.cardx-shadow {
