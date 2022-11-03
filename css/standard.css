@@ -549,14 +549,23 @@ form{
   }
 
   .panel{
-    grid-area: 1 / 10 / 4 / 13;
-    /* display: none; */
+    margin-bottom: 10px;
+    background-color:#E97171;
+    max-width: 500px;
+    min-width: 400px;
+    padding: 10px 10px;
+    align-self: center;
+}
+
+  /* .panel{
+    display: flex;
+    flex-direction: column;
     background-color:#E97171;
     border-radius: .5rem;
     padding: 10px 10px;
     max-width: 300px;
     align-self: center;
-  }
+} */
 
   .mycard{
     font-family: 'Monserrat', sans-serif;
@@ -617,7 +626,7 @@ form{
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto;
     grid-template-areas: 
-    "img name name" 
+    "img name remove" 
     "img disc disc"
     "img btn price" ;
     justify-content: space-around;
@@ -680,7 +689,30 @@ form{
     font-family: 'Motserrat', sans-serif;
 }
 
-.cardx-footer i{
+.cardx-footer ic{
     color: #3C38A6;
     cursor: pointer;
+}
+.remove{
+    grid-area: remove;
+    display: flex;
+    justify-content: end;
+}
+
+.total{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    gap: 10px;
+    /* width: fit-content; */
+    align-items: center;
+    background-color: transparent;
+    padding: 5px 10px;
+    font-family: 'Monserrat', sans-serif;
+    color: aliceblue;
+    color: white;
+    /* background-color: white; */
+    border-radius: 10px;
+    /* font-weight: bold; */
+    margin-bottom: 10px;
 }
