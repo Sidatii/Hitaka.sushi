@@ -64,7 +64,8 @@ var addtocard = document.getElementsByClassName('btn');
     }
 
 
-//quantity changes
+// quantity changes
+
 // var qtyminus = document.getElementsByClassName('fa-minus');
 // for(var i = 0; i< qtyminus.length; i++){
 //     var minus = qtyminus[i];
@@ -87,9 +88,33 @@ function AddToCardClicked(e){
     var prdName = orderProduct.getElementsByClassName('card-name')[0].innerText;
     var prdPrice = orderProduct.getElementsByClassName('price')[0].innerText;
     var prdDisc = orderProduct.getElementsByClassName('disc')[0].innerText;
-    // var prdImage = orderProduct.getElementsByClassName('prd-img')[0].src;
-    console.log(prdPrice, prdName, prdDisc);
+    var prdImg = orderProduct.getElementsByClassName('card-header')[0];
+    var prdSrc = prdImg.getElementsByClassName('cardImg')[0].src;
+    addProductToCard(prdSrc,prdName,prdDisc, prdPrice);
+    updateTotal();
 }
+
+function addProductToCard(prdSrc,prdName,prdDisc, prdPrice){
+
+    var cardShopBox = document.createElement('div');
+    cardShopBox.classList.add('cardx');
+    var cardItems = document.getElementsByClassName('cardcontent')[0];
+    var cardItemsNames = cardItems.getElementsByClassName('cardx-name');
+    for (var i = 0; i< cardItemsNames.length; i++){
+        if (cardItemsNames[i].innerText == prdName){
+        alert("You have already added this product");
+        return;
+    }
+    } 
+ 
+var cardBoxContent = `<div class="cardx-header cardx-image"><img src="${prdSrc}" /></div><div class="cardx-name">${prdName}</div><div class="discx">${prdDisc}</div><div class="pricex">${prdPrice}</div><div class="cardx-footer"><i class="fa-solid fa-minus"></i><text class="qty">3</text><i class="fa-solid fa-plus"></i></div><div class="remove"><i class="fa-solid fa-xmark"></i></div>`;
+cardShopBox.innerHTML = cardBoxContent;
+console.log(cardShopBox);
+cardItems.append(cardShopBox);
+cardShopBox.getElementsByClassName('remove')[0].addEventListener('click', removeitem);
+// cardShopBox.getElementsByClassName('qty')[0].addEventListener('change', qtychanged);
+}  
+
 
 
 // update total function
