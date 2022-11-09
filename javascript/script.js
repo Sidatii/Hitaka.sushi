@@ -18,12 +18,12 @@ function resetmenu(){
 }
 window.addEventListener('resize', resetmenu);
 
-var items=document.querySelectorAll('.item');
-items.forEach((item)=> {
-    item.addEventListener('click',()=>{
-        document.getElementById('navbaritems').style.display = 'none';
-    });
-});
+// var items=document.getElementsByClassName('item');
+// items.forEach((item)=> {
+//     item.addEventListener('click',()=>{
+//         document.getElementById('navbaritems').style.display = 'none';
+//     });
+// });
 
 
 
