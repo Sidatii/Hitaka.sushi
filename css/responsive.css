@@ -1,5 +1,10 @@
 /* Responsive of tablet wide 800px ########################################################*/
 
+@media (max-width: 1250px){
+    
+}
+
+
 @media (max-width: 800px){
     .navbar{
         display: flex;
@@ -43,11 +48,13 @@
         padding: 10px 10px;
         align-self: center;
     }
+
+
 }
 
 /* Responsive of tablet 768px ########################################################*/
 
-@media (max-width: 768px){
+@media (max-width: 800px){
 
     
 
@@ -191,8 +198,9 @@
 
     .par3 .par3img1 {
         display: flex;
-        align-items: flex-end;
-        justify-content: flex-end;
+        /* align-items: flex-end;
+        justify-content: flex-end; */
+        align-self: flex-end;
         
     }
     .par3 .par3img1 img{

@@ -1,6 +1,8 @@
 @font-face {
     font-family: "Japan";
     src: url(../fonts/JAPAN-Light.woff);
+    /* font-family: "Japanese 2020";
+    src: url(../fonts/JAPANESE_2020.otf), format(opentype); */
 }
 
 *{
@@ -78,6 +80,7 @@ body{
 
 .logo{
     padding: 0px 20px;
+    font-family: "Old Japanese", sans-serif;
 }
 
 
@@ -126,10 +129,14 @@ body{
 .par1{
     display: flex;
     justify-content: space-evenly;
-    /* flex-basis: 50%; */
+    flex-basis: 50%;
     /* padding: 40px 80px; */
     position: relative;
     /* background-size: cover; */
+    width: 100%;
+}
+
+.par1 .par1text{
     width: 100%;
 }
 
@@ -156,7 +163,6 @@ body{
     width: 100%;
     position: relative;
     z-index: 1;
-    width: 100%;
 }
 
 
@@ -173,12 +179,13 @@ body{
     flex-basis: 50%;
     padding: 10px 0px;
     position: relative;
-    z-index: -1;
     background-size: cover;
+    width: 100%;
 }
 
 .par3 .par3text{
     padding-top: 0px 0px;
+    width: 100%;
 }
 
 .par3 .par3text h1{
@@ -202,9 +209,9 @@ body{
 .par3 .par3img{
     width: 80vw;
 }
-.par3 .par3img1{
+/* .par3 .par3img1{
     width: 80vw;
-}
+} */
 
 .par3 .par3img img{
     width: 100%;
