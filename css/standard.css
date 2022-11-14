@@ -729,3 +729,9 @@ form{
     /* font-weight: bold; */
     margin-bottom: 10px;
 }
+
+.filter{
+    display: flex;
+    margin: 10px 10px;
+
+}

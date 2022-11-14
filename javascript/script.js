@@ -9,14 +9,14 @@ function mobilemenu(){
 }
 document.getElementById('toggle').addEventListener('click', mobilemenu);
 
-function resetmenu(){
-    if (window.innerWidth >= 800){
-        document.getElementById('navbaritems').style.display = 'flex';
-    } else if(window.innerWidth < 800){
-        document.getElementById('navbaritems').style.display = 'none';
-    }
-}
-window.addEventListener('resize', resetmenu);
+// function resetmenu(){
+//     if (window.innerWidth >= 800){
+//         document.getElementById('navbaritems').style.display = 'flex';
+//     } else if(window.innerWidth < 800){
+//         document.getElementById('navbaritems').style.display = 'none';
+//     }
+// }
+// window.addEventListener('resize', resetmenu);
 
 // var items=document.getElementsByClassName('item');
 // items.forEach((item)=> {
@@ -24,6 +24,13 @@ window.addEventListener('resize', resetmenu);
 //         document.getElementById('navbaritems').style.display = 'none';
 //     });
 // });
+function hidemenu(){
+    console.log("clicked");
+    document.getElementById('navbaritems').style.display = 'none';
+    
+}
+
+
 
 
 

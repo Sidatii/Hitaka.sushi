@@ -14,7 +14,7 @@
         padding-bottom: 10px;
     }
     .navbar .navbaritems{
-        display: block;
+        display: none;
         align-items: center;
         text-align: center;
         border-radius: 10px;
