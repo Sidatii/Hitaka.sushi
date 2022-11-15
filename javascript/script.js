@@ -24,11 +24,12 @@ document.getElementById('toggle').addEventListener('click', mobilemenu);
 //         document.getElementById('navbaritems').style.display = 'none';
 //     });
 // });
-function hidemenu(){
-    console.log("clicked");
-    document.getElementById('navbaritems').style.display = 'none';
+
+// function hidemenu(){
+//     console.log("clicked");
+//     document.getElementById('navbaritems').style.display = 'none';
     
-}
+// }
 
 
 

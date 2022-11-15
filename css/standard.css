@@ -248,6 +248,11 @@ body{
     font-weight: bold;
     font-size: 17;
 }
+button:hover{
+    background:#D94E4E;
+    color: aliceblue;
+    cursor: pointer;
+  }
 
 .footer1{
     display: flex;
@@ -537,10 +542,10 @@ form{
     border-radius: 10px;
   }
   
-  .btn:hover{
+  /* .btn:hover{
     background:#D94E4E;
     color: aliceblue;
-  }
+  } */
   
   .btn.btn-outline {
     background: none;
@@ -730,7 +735,9 @@ form{
     margin-bottom: 10px;
 }
 
-.filter{
+
+
+.filterbox ul{
     display: flex;
     margin: 10px 10px;
 
