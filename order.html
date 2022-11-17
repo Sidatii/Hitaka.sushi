@@ -47,17 +47,17 @@
     </div>
     <di class="filterbox">
       <ul class="filter">
-        <li class="sushi"><button>Sushi</button> </li>
-        <li class="ramen"><button>Ramen</button></li>
-        <li class="tuna"><button>Tuna</button></li>
-        <li class="rice"><button>Rice</button></li>
-        <li class="tokoyaki"><button>Tokoyaki</button></li>
+        <li class="sushi"><button onclick="filterProduct('sushi')">Sushi</button> </li>
+        <li class="ramen"><button onclick="filterProduct('ramen')">Ramen</button></li>
+        <li class="tuna"><button onclick="filterProduct('tuna')">Tuna</button></li>
+        <li class="rice"><button onclick="filterProduct('rice')">Rice</button></li>
+        <li class="all"><button onclick="filterProduct('all')">all</button></li>
       </ul>
     </di>
     
     <div class="order-box">
       <div class="card-grid">
-        <div class="card card-shadow">
+        <div class="card card-shadow sushi">
           <div class="card-header card-image">
             <img src="images/img1.png" />
           </div>
@@ -69,7 +69,7 @@
             <button class="btn">Add to card</button>
           </div>
         </div>
-        <div class="card card-shadow">
+        <div class="card card-shadow sushi">
           <div class="card-header card-image">
             <img class="cardImg" src="images/img2.png" />
           </div>
@@ -81,7 +81,7 @@
             <button class="btn">Add to card</button>
           </div>
         </div>
-        <div class="card card-shadow">
+        <div class="card card-shadow sushi">
           <div class="card-header card-image">
             <img class="cardImg" src="images/img3.png" />
           </div>
@@ -93,7 +93,7 @@
             <button class="btn">Add to card</button>
           </div>
         </div>
-        <div class="card card-shadow">
+        <div class="card card-shadow sushi">
           <div class="card-header card-image">
             <img class="cardImg" src="images/img4.png" />
           </div>
@@ -105,7 +105,7 @@
             <button class="btn">Add to card</button>
           </div>
         </div>
-        <div class="card card-shadow">
+        <div class="card card-shadow ramen">
           <div class="card-header card-image">
             <img class="cardImg" src="images/img5.png" />
           </div>
@@ -141,7 +141,7 @@
             <button class="btn">Add to card</button>
           </div>
         </div>
-        <div class="card card-shadow">
+        <div class="card card-shadow" id="sushi">
           <div class="card-header card-image">
             <img class="cardImg" src="images/img8.png" />
           </div>
@@ -153,7 +153,7 @@
             <button class="btn">Add to card</button>
           </div>
         </div>
-        <div class="card card-shadow">
+        <div class="card card-shadow" >
           <div class="card-header card-image">
             <img class="cardImg" src="images/img9.png"/>
           </div>

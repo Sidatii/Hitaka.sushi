@@ -1,3 +1,4 @@
+
 function mobilemenu(){
     if(document.getElementById('navbaritems').style.display == 'block'){
         document.getElementById('navbaritems').style.display = 'none';
@@ -110,7 +111,11 @@ function addProductToCard(prdSrc,prdName,prdDisc, prdPrice){
     var cardItemsNames = cardItems.getElementsByClassName('cardx-name');
     for (var i = 0; i< cardItemsNames.length; i++){
         if (cardItemsNames[i].innerText == prdName){
-        alert("You have already added this product");
+            Swal.fire(
+                'Good job!',
+                'You clicked the button!',
+                'success'
+              )
         return;
     }
     } 
@@ -145,4 +150,32 @@ function updateTotal(){
     }
 }
 
+function ShowAllProducts() {
+    var allcards = document.getElementsByClassName('card')
+    // console.log(allcards);
+    for (let i = 0; i < allcards.length; i++) {
+        allcards[i].style.display = 'grid'
+        // allcards[i].classList.add('.card')
+        // console.log(allcards);
+    }
+}
 
+function HideAllProducts() {
+    var allcards = document.getElementsByClassName('card');
+    for (let i = 0; i < allcards.length; i++) {
+        allcards[i].style.display = 'none'
+    }
+}
+
+function filterProduct(category){
+
+    if (category === 'all') {
+        ShowAllProducts()
+    }else{
+        HideAllProducts()
+          let chosencategory = document.getElementsByClassName(category);
+          for (let i = 0; i < chosencategory.length; i++) {
+            chosencategory[i].style.display = 'grid'
+        }
+    }
+}
