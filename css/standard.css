@@ -131,9 +131,10 @@ body{
     justify-content: space-evenly;
     flex-basis: 50%;
     /* padding: 40px 80px; */
-    position: relative;
+    /* position: relative; */
     /* background-size: cover; */
     width: 100%;
+    padding: 10px 10px;
 }
 
 .par1 .par1text{
@@ -163,8 +164,14 @@ body{
     width: 100%;
     position: relative;
     z-index: 1;
+    /* width: 482px; */
 }
-
+.par1 .par1img .caroos{
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    width: 482px;
+}
 
 .par2{
     display: flex;
@@ -206,9 +213,11 @@ body{
     width: 90%;
     padding-left: 90px;
 }
-.par3 .par3img{
-    width: 80vw;
+
+.par3 .par3img img{
+    width: 4000px;
 }
+
 /* .par3 .par3img1{
     width: 80vw;
 } */
@@ -257,14 +266,15 @@ button:hover{
 .footer1{
     display: flex;
     justify-content: space-evenly;
-    gap: 30px;
+    gap: 20px;
     align-items: center;
-    padding: 40px 20px;
+    padding: 20px 20px;
     font-size: 20px;
 }
 
 .footer1 li{
     list-style-type: none;
+    font-size: 16px;
 }
 
 .footer1 .icons{
@@ -272,7 +282,7 @@ button:hover{
     flex-direction: column;
     justify-content: space-evenly;
     gap: 20px;
-    width: 5%;
+    width: 30px;
 }
 
 .footer1 .links{
@@ -430,6 +440,15 @@ form{
     width: 150px;
 }
 
+.japanese{
+    display: flex;
+    justify-content: center;
+    padding: 0px 0px;
+    width: 100%;
+    align-self: center;
+    margin: 0px 0px; 
+}
+
 /*#########################################################################################*/
 .order-box{
     display: flex;
@@ -438,12 +457,12 @@ form{
   .card-grid {
     grid-area: 1 / 1 / 6 / 10;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 0.20fr));
     gap: 1rem;
     align-items: flex-start;
-    /* background-color: #E97171; */
     padding: 1em;
     margin-bottom: 1em;
+    justify-content: center;
   }
   
   .card {
@@ -480,11 +499,10 @@ form{
     justify-content: center;
     align-items: center;
     width: 100%;
-    /* border: 1px solid #D94E4E; */
     max-height: 300px;
     aspect-ratio: 10 / 7;
     object-fit: cover;
-    height: 100px;
+    max-height: 137px;
     width: 120px;
     object-position: center;
     transition: 200ms transform ease-in-out;
@@ -562,12 +580,15 @@ form{
   }
 
   .panel{
+    display: flex;
     margin-bottom: 10px;
+    margin-top: 20px;
     background-color:#E97171;
     max-width: 700px;
     min-width: 400px;
     padding: 10px 10px;
     align-self: center;
+    justify-self: center;
 }
 
   .panel{
@@ -646,6 +667,7 @@ form{
     font-family: 'Monserrat', sans-serif;
     box-shadow: #777;
     border: none;
+    max-height: 144px;
 }
 
 .cardx-image{
@@ -661,7 +683,7 @@ form{
     align-items: center;
     width: 100%;
     max-height: 300px;
-    /* aspect-ratio: 10 / 7; */
+    aspect-ratio: 10 / 7;
     object-fit: cover;
     /* height: 100px;
     width: 120px; */
@@ -703,8 +725,9 @@ form{
     grid-area: 4 / 3 / 5 / 5;
     padding: 4px 5px;
     width: fit-content;
-    /* max-height: 31px !important; */
+    max-height: 31px !important;
     font-family: 'Motserrat', sans-serif;
+    font-weight: bolder;
 }
 
 .cardx-footer i{
@@ -720,7 +743,6 @@ form{
 
 .total{
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     gap: 10px;
     /* width: fit-content; */
@@ -730,9 +752,8 @@ form{
     font-family: 'Monserrat', sans-serif;
     color: aliceblue;
     color: white;
-    /* background-color: white; */
     border-radius: 10px;
-    /* font-weight: bold; */
+    font-weight: bold;
     margin-bottom: 10px;
 }
 

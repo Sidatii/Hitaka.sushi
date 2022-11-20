@@ -1,8 +1,52 @@
 /* Responsive of tablet wide 800px ########################################################*/
 
-/* @media (max-width: 1250px){
-    
-} */
+@media (max-width: 1200px){
+    .opening{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .opening .opimages .img-distr img{
+        width: 300px;
+        
+    }
+
+    .par1{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .par1 .par1img{
+        width: 300px;
+        align-self: center;
+    }
+    .par1 .par1img .caroos{
+        width: 300px;
+    }
+
+    .par2{
+        display: none;
+    }
+
+    .par3{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .par3 .par3img1 img{
+        width: 300px;
+    }
+
+    .par3 .par3img{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .par3 .par3img img{
+        width: 300px;
+    }
+
+}
 
 
 @media (max-width: 800px){
@@ -103,9 +147,7 @@
         align-items: center;
         padding: 10px 10px;
         position: relative;
-        /* width: 94%; */
         height: auto;
-        /* z-index: 10; */
         
     }
  
@@ -115,6 +157,11 @@
         width: 90%;
 
     }
+
+    .opening .orderimg img{
+        width: 300px;
+    }
+
     .opening .opimages {
         display: flex;
         justify-content: center;
@@ -239,6 +286,12 @@
 /* Responsive of mobile wide 490px ########################################################*/
 
 @media (max-width: 490px){
+
+    .card-grid{
+        display: flex;
+        flex-direction: column;
+    }
+
     .card {
         display: grid;
         grid-template-columns: auto auto auto;
