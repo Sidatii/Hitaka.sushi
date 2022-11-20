@@ -32,11 +32,6 @@ document.getElementById('toggle').addEventListener('click', mobilemenu);
     
 // }
 
-
-
-
-
-
 // Adding card functionalities
 
 if (document.readyState == 'loading'){
@@ -50,10 +45,17 @@ if (document.readyState == 'loading'){
 function ready(){
     //remove items from our card
     var removebuttons = document.getElementsByClassName('remove');
-    console.log(removebuttons);
     for(var i = 0; i<removebuttons.length; i++){
         var button = removebuttons[i];
         button.addEventListener('click', removeitem);
+    }
+
+
+    var qtyminus = document.getElementsByClassName('fa-solid fa-minus');
+    console.log(document.getElementsByClassName('fa-solid fa-minus'));
+    for (let i = 0; i < qtyminus.length; i++) {
+        var minus = qtyminus[i];
+        minus.addEventListener('click', reduceQuantity);
     }
 }
 
@@ -63,6 +65,24 @@ function removeitem(e){
     var buttonclicked = e.target;
     buttonclicked.parentElement.parentElement.remove();
     updateTotal();
+}
+
+function reduceQuantity(){
+    var cardcontent = document.getElementsByClassName('cardcontent')[0];
+    var cardboxes = cardcontent.getElementsByClassName('cardx');
+    var quantity = 0;
+    for(var i = 0; i< cardboxes.length; i++){
+        var cardbox = cardboxes[i];
+        var qtyelement = cardbox.getElementsByClassName('qty')[0];
+        var qty = parseInt(qtyelement.innerText);
+        if (quantity-- < 0) {
+            quantity = 0;
+        } 
+        else{
+            quantity--;
+        }
+    document.getElementsByClassName('qty')[0].innerText = quantity;
+    }
 }
 
 // Add to card
@@ -75,21 +95,18 @@ var addtocard = document.getElementsByClassName('btn');
 
 // quantity changes
 
-// var qtyminus = document.getElementsByClassName('fa-minus');
-// for(var i = 0; i< qtyminus.length; i++){
-//     var minus = qtyminus[i];
-//     minus.addEventListener('click', reduce);
+// var addQuantity = document.getElementsByClassName('fa-plus')
+// for (let i = 0; i < increaseQuantity.length; i++) {
+//     increaseQuantity[0].addEventListener('click', increaseQuantity)
 // }
 
-// function reduce(){
-//     var qtychanged = document.getElementsByClassName('qty')[0];
-//     for(var i = 0; i< qtychanged.length; i++){
-//         var minus = qtychanged[i];
+var qtyminus = document.getElementsByClassName('fa-solid fa-minus');
+console.log(qtyminus);
+for (let i = 0; i < qtyminus.length; i++) {
+    var minus = qtyminus[i];
+    minus.addEventListener('click', console.log('hhhhhhhhh'));
+}
 
-//     }
-//     console.log("total");
-//     qty++;
-// }
 
 function AddToCardClicked(e){
     var button = e.target;
@@ -101,7 +118,12 @@ function AddToCardClicked(e){
     var prdSrc = prdImg.getElementsByClassName('cardImg')[0].src;
     addProductToCard(prdSrc,prdName,prdDisc, prdPrice);
     updateTotal();
+
+
+
+    // console.log(qtyminus);
 }
+
 
 function addProductToCard(prdSrc,prdName,prdDisc, prdPrice){
 
@@ -122,7 +144,6 @@ function addProductToCard(prdSrc,prdName,prdDisc, prdPrice){
  
 var cardBoxContent = `<div class="cardx-header cardx-image"><img src="${prdSrc}" /></div><div class="cardx-name">${prdName}</div><div class="discx">${prdDisc}</div><div class="pricex">${prdPrice}</div><div class="cardx-footer"><i class="fa-solid fa-minus"></i><text class="qty">3</text><i class="fa-solid fa-plus"></i></div><div class="remove"><i class="fa-solid fa-xmark"></i></div>`;
 cardShopBox.innerHTML = cardBoxContent;
-console.log(cardShopBox);
 cardItems.append(cardShopBox);
 cardShopBox.getElementsByClassName('remove')[0].addEventListener('click', removeitem);
 // cardShopBox.getElementsByClassName('qty')[0].addEventListener('change', qtychanged);
@@ -155,8 +176,6 @@ function ShowAllProducts() {
     // console.log(allcards);
     for (let i = 0; i < allcards.length; i++) {
         allcards[i].style.display = 'grid'
-        // allcards[i].classList.add('.card')
-        // console.log(allcards);
     }
 }
 

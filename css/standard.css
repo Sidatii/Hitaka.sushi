@@ -450,7 +450,7 @@ form{
     --padding: 1rem;
     background: white;
     border: 1px solid #777;
-    border-radius: .25rem;
+    border-radius: 1rem;
     overflow: hidden;
   }
   
@@ -642,8 +642,10 @@ form{
     grid-row-gap: 4px;
     justify-content: space-around;
     padding: 10px 10px;
-    /* gap: 10px; */
+    border-radius: 15px;
     font-family: 'Monserrat', sans-serif;
+    box-shadow: #777;
+    border: none;
 }
 
 .cardx-image{
@@ -689,20 +691,19 @@ form{
     align-items: center;
     font-family: 'Monserrat', sans-serif;
     color: #3C38A6;
+    font-weight: bolder;
 }
 .cardx-footer{
     display: flex;
     justify-content: center;
-    /* background-color: #868686; */
-    border: 2px solid #777;
+    align-items: center;
+    border: 2px solid rgba(119, 119, 119, 0.674);
     border-radius: 5px;
     gap: 10px;
-    
     grid-area: 4 / 3 / 5 / 5;
-    /* grid-area: btn; */
-    margin-top: 0em;
-    padding: 4px 10px;
+    padding: 4px 5px;
     width: fit-content;
+    /* max-height: 31px !important; */
     font-family: 'Motserrat', sans-serif;
 }
 
@@ -739,6 +740,16 @@ form{
 
 .filterbox ul{
     display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 10px 10px;
+    list-style: none;
+}
 
+.filterbox ul li button{
+    padding: 3px 3px;
+    border-radius: 10px;
+    width: 80px;
+    height: 55px;
 }
