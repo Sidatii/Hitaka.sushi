@@ -449,6 +449,16 @@ form{
     margin: 0px 0px; 
 }
 
+.submit{
+    color:#D94E4E;
+    background-color: aliceblue;
+    padding: 5px 20px;
+    font-weight: bold;
+}
+.submit:hover{
+    border: 2px solid aliceblue;
+}
+
 /*#########################################################################################*/
 .order-box{
     display: flex;

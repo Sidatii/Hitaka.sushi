@@ -104,9 +104,9 @@ function addProductToCard(prdSrc,prdName,prdDisc, prdPrice){
     for (var i = 0; i< cardItemsNames.length; i++){
         if (cardItemsNames[i].innerText == prdName){
             Swal.fire(
-                'Good job!',
-                'You clicked the button!',
-                'success'
+                'Oops!',
+                'You have already added this product',
+                'warning'
               )
         return;
     }
@@ -191,3 +191,16 @@ function increaseQuantity(e){
     e.previousElementSibling.innerText = qty;
     updateTotal();
 }
+
+function submitConfirmation(){
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Your message has been received',
+        showConfirmButton: false,
+        timer: 1500
+      });
+}
+
+
+        
