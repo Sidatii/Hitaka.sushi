@@ -49,8 +49,6 @@ function ready(){
         var button = removebuttons[i];
         button.addEventListener('click', removeitem);
     }
-
-
 }
 
 
@@ -133,9 +131,8 @@ function updateTotal(){
         var price = parseFloat(priceelement.innerText.replace('Dh', ''));
         var qty = parseInt(qtyelement.innerText);
         total = total + (price * qty);
-        // console.log("total");
         total = Math.round(total * 100)/100;
-
+        
         document.getElementsByClassName('amount')[0].innerText = total + ' Dh';
     }
 }
@@ -171,21 +168,24 @@ function filterProduct(category){
 
 function reduceQuantity(e){
     qty = +e.nextElementSibling.innerText;
-
-    if (qty <= 1) {
-        e.parentElement.parentElement.remove();
+    if (qty >= 1) {
+        console.log(qty);
+        qty--; 
+        e.nextElementSibling.innerText = qty;
     }
     else{
-        qty--;
+        e.nextElementSibling.innerText = qty;
+        updateTotal();
+        e.parentElement.parentElement.remove();  
     }
     
-    e.nextElementSibling.innerText = qty;
     updateTotal();
+    if (qty === 0) e.parentElement.parentElement.remove(); 
+
 }
 
 function increaseQuantity(e){
     qty = +e.previousElementSibling.innerText;
-    console.log(qty);
         qty++;
     
     e.previousElementSibling.innerText = qty;
