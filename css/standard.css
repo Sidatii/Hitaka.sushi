@@ -130,10 +130,7 @@ body{
     display: flex;
     justify-content: space-evenly;
     flex-basis: 50%;
-    /* padding: 40px 80px; */
-    /* position: relative; */
-    /* background-size: cover; */
-    width: 100%;
+    /* width: 100%; */
     padding: 10px 10px;
 }
 
