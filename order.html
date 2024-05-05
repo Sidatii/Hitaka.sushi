@@ -19,16 +19,30 @@
       <div class="navbar" id="navbar">
         <div class="respo">
           <a href="index.html"><img class="logo" src="images/Hitaka_logo.svg" alt="LOGO" width="70px"></a>
-          <div class="toggle" id="toggle">
-            <img src="images/assets/toggle.svg" alt="toggle">
+          <div class="toggle" >
+              <img src="images/assets/cartIcon.svg" alt="toggle" onclick="openCart()">
+              <img src="images/assets/toggle.svg" alt="toggle" id="toggle">
           </div>
-        </div>
+      </div>
         <ul class="navbaritems" id="navbaritems">
+          <li>
+            <img src="images/assets/cartIcon.svg" alt="toggle" onclick="openCart()">
+          </li>
           <li class="home"><a href="index.html">Home</a></li>
           <li class="arder"><a href="order.html">Order</a> </li>
           <li class="about"><a href="about.html">About</a> </li>
           <li class="contact"><a href="contact.html">Contact</a></li>
         </ul>
+      </div>
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <div class="empty">
+            <img src="images/empty-cart.png" alt="">
+            <span>Oups No sushi found </span>
+            <div class="toOrder">
+                <a href="order.html">Discover our menu</a>
+            </div>
+        </div>
       </div>
     </header>
     <!--########################################################################-->
