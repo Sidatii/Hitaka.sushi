@@ -65,7 +65,7 @@
         color: aliceblue;
         padding: 0px 0px;
     }
-    .navbar .navbaritems img{
+    .navbar .navbaritems .cart_icon{
         display: none;
     }
     .navbar ul li{
@@ -337,6 +337,9 @@
         grid-area: btn;
         margin-top: 0em;
         padding: 10px;
+    }
+    #addedItems{
+        max-height: 70vh;
     }
   }
 

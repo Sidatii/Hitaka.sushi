@@ -20,14 +20,17 @@
         <div class="respo">
           <a href="index.html"><img class="logo" src="images/Hitaka_logo.svg" alt="LOGO" width="70px"></a>
           <div class="toggle" >
+            <div class="cart_icon">
               <img src="images/assets/cartIcon.svg" alt="toggle" onclick="openCart()">
-              <img src="images/assets/toggle.svg" alt="toggle" id="toggle">
+              <div class="nb_items"></div>
+            </div>              
+            <img src="images/assets/toggle.svg" alt="toggle" id="toggle">
           </div>
       </div>
         <ul class="navbaritems" id="navbaritems">
           <li class="cart_icon">
             <img src="images/assets/cartIcon.svg" alt="toggle" onclick="openCart()">
-            <div id="nb_items"></div>
+            <div class="nb_items"></div>
           </li>
           <li class="home"><a href="index.html">Home</a></li>
           <li class="arder"><a href="order.html">Order</a> </li>
@@ -37,6 +40,9 @@
       </div>
       <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <div class="japanese">
+          <img src="images/assets/japanese.svg" alt="Japanese">
+        </div>
         <div class="empty" id="addedItems">
         </div>
         <div class="totalContainer">
@@ -74,16 +80,13 @@
       <div class="card-grid" id="menu"></div>
         
       </div>
-      <div class="japanese">
-        <img src="images/assets/japanese.svg" alt="Japanese">
-      </div>
-      <div class="panel">
+
+      <!-- <div class="panel">
         <div class="mycard">
           My Card
         </div>
         <div class="cardcontent">
-          <!-- <div class="cardx cardx-shadow">
-          </div> -->
+
         </div>
         <div class="total">
           <div class="label">Total: </div>
@@ -92,7 +95,7 @@
         <div class="confirmation">
           <input type="submit" value="Confirm your order">
         </div>
-      </div>
+      </div> -->
     </div>
     <!--########################################################################-->
     <footer class="footer" style="background-color: #E97171;">
@@ -139,5 +142,6 @@
     </footer>
     <script src="javascript/script.js"></script>
     <script src="javascript/order.js"></script>
+    <script src="javascript/products.js"></script>
   </body>
 </html>

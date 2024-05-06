@@ -467,7 +467,7 @@ button:hover{
 .japanese{
     display: flex;
     justify-content: center;
-    padding: 0px 0px;
+    padding: 10px 0px;
     width: 100%;
     align-self: center;
     margin: 0px 0px; 
@@ -916,7 +916,7 @@ margin-left: 50px;
 .cart_icon {
     position: relative;
 }
-#nb_items{
+.nb_items{
     position: absolute;
     display: flex;
     justify-content: center;
@@ -933,7 +933,7 @@ margin-left: 50px;
 #addedItems{
     display: flex;
     padding: 10px;
-    max-height: 70vh;
+    max-height: 54vh;
     overflow-y: auto;
 }
 .added-item {
@@ -964,21 +964,27 @@ margin-left: 50px;
     justify-content: space-between;
     align-items: center;
 }
-.quantity-control {
+.quantity-control 
+{
     display: flex;
     align-items: center;
     width: 100%;
     justify-content: center;
     margin-top: 5px; /* Add some space between name/price and quantity */
 }
+.quantity-control span {
+    padding: 0 10px;
+}
+
 .quantity-btn {
-    padding: 5px;
+    padding: 8px 10px;
     background-color: #D94E4E;
     color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     margin: 0 5px;
+    font-size: 18px;
 }
 .quantity-btn:hover {
     background-color: #e27f7f;
