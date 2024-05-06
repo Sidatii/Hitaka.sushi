@@ -64,9 +64,9 @@ function removeitem(e){
 
 
 // Add to card
-var addtocard = document.getElementsByClassName('btn');
-for(var i = 0; i< addtocard.length; i++){
-    var addtocard1 = addtocard[i];
+const addtocard = document.getElementsByClassName('btn');
+for(const i = 0; i< addtocard.length; i++){
+    const addtocard1 = addtocard[i];
     addtocard1.addEventListener('click', AddToCardClicked);
 }
 
@@ -76,13 +76,15 @@ for(var i = 0; i< addtocard.length; i++){
 
 
 function AddToCardClicked(e){
-    var button = e.target;
-    var orderProduct = button.parentElement.parentElement;
-    var prdName = orderProduct.getElementsByClassName('card-name')[0].innerText;
-    var prdPrice = orderProduct.getElementsByClassName('price')[0].innerText;
-    var prdDisc = orderProduct.getElementsByClassName('disc')[0].innerText;
-    var prdImg = orderProduct.getElementsByClassName('card-header')[0];
-    var prdSrc = prdImg.getElementsByClassName('cardImg')[0].src;
+    const button = e.target;
+    const orderProduct = button.parentElement.parentElement.parentElement;
+    const prdName = orderProduct.getElementsByClassName('card-name')[0].innerText;
+    const prdPrice = orderProduct.getElementsByClassName('price')[0].innerText;
+    const prdDisc = orderProduct.getElementsByClassName('disc')[0].innerText;
+    const prdImg = orderProduct.getElementsByClassName('card-header')[0];
+    const prdSrc = prdImg.getElementsByClassName('cardImg')[0].src;
+    console.log(prdSrc,prdName,prdDisc, prdPrice);
+
     addProductToCard(prdSrc,prdName,prdDisc, prdPrice);
     updateTotal();
 
@@ -203,8 +205,8 @@ function submitConfirmation(){
 }
 
 function openCart(){
-    document.getElementById("mySidebar").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
+    document.getElementById("mySidebar").style.width = "350px";
+    document.getElementById("main").style.marginLeft = "150px";
 }
 
 function closeNav() {
