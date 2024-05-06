@@ -4,28 +4,33 @@ const menuItems = [
         "image": "images/img1.png",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos deleniti saepe, sunt numquam ab sit.",
         "price": 320,
-        "quantity": 1
+        "quantity": 1,
+        "category":"sushi"
     },
     {
         "name": "Sushi 22",
         "image": "images/img2.png",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos deleniti saepe, sunt numquam ab sit.",
         "price": 150,
-        "quantity": 1
+        "quantity": 1,
+        "category":"sushi"
     },
     {
-        "name": "Sushi 33",
+        "name": "rice 33",
         "image": "images/img3.png",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos deleniti saepe, sunt numquam ab sit.",
         "price": 49,
-        "quantity": 1
+        "quantity": 1,
+        "category":"rice"
     },
     {
         "name": "Salade",
         "image": "images/img4.png",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos deleniti saepe, sunt numquam ab sit.",
         "price": 130,
-        "quantity": 1
+        "quantity": 1,
+        "category":"rice"
+
 
     },
     {
@@ -33,15 +38,16 @@ const menuItems = [
         "image": "images/img5.png",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos deleniti saepe, sunt numquam ab sit.",
         "price": 240,
-        "quantity": 1
-
+        "quantity": 1,
+        "category":"sushi"
     },
     {
         "name": "Sushi 55",
         "image": "images/img6.png",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos deleniti saepe, sunt numquam ab sit.",
         "price": 150,
-        "quantity": 1
+        "quantity": 1,
+        "category":"sushi"
 
     },
     {
@@ -49,7 +55,8 @@ const menuItems = [
         "image": "images/img7.png",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos deleniti saepe, sunt numquam ab sit.",
         "price": 122,
-        "quantity": 1
+        "quantity": 1,
+        "category":"tuna"
 
     },
     {
@@ -57,7 +64,8 @@ const menuItems = [
         "image": "images/img8.png",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos deleniti saepe, sunt numquam ab sit.",
         "price": 69,
-        "quantity": 1
+        "quantity": 1,
+        "category":"tuna"
 
     },
     {
@@ -65,7 +73,8 @@ const menuItems = [
         "image": "images/img9.png",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos deleniti saepe, sunt numquam ab sit.",
         "price": 82,
-        "quantity": 1
+        "quantity": 1,
+        "category":"ramen"
 
     }
 ]
@@ -73,44 +82,54 @@ const menuItems = [
 
 const menuList = document.getElementById("menu");
 
-menuItems.forEach(item => {
-    const card = document.createElement("div");
-    card.className = "card card-shadow sushi";
+function filterProduct(category) {
+    const filteredItems = category === 'all' ? menuItems : menuItems.filter(item => item.category === category);
+    displayMenu(filteredItems);
+}
 
-    const cardHeader = document.createElement("div");
-    cardHeader.className = "card-header card-image";
-    const img = document.createElement("img");
-    img.src = item.image;
-    cardHeader.appendChild(img);
+function displayMenu(items) {
+    menuList.innerHTML = ''; // Clear the current menu
+    items.forEach(item => {
+        const card = document.createElement("div");
+        card.className = "card card-shadow sushi";
 
-    const cardName = document.createElement("div");
-    cardName.className = "card-name";
-    cardName.innerText = item.name;
+        const cardHeader = document.createElement("div");
+        cardHeader.className = "card-header card-image";
+        const img = document.createElement("img");
+        img.src = item.image;
+        cardHeader.appendChild(img);
 
-    const disc = document.createElement("div");
-    disc.className = "disc";
-    disc.textContent = item.description;
+        const cardName = document.createElement("div");
+        cardName.className = "card-name";
+        cardName.innerText = item.name;
 
-    const pricing = document.createElement("div");
-    pricing.className = "pricing";
-    const price = document.createElement("div");
-    price.className = "price";
-    price.textContent = item.price+" dh";
-    const cardFooter = document.createElement("div");
-    cardFooter.className = "card-footer";
-    const btn = document.createElement("button");
-    btn.className = "btn";
-    btn.textContent = "Order";
-    btn.addEventListener("click", () => handleOrderClick(item)); // Add click event listener
-    cardFooter.appendChild(btn);
+        const disc = document.createElement("div");
+        disc.className = "disc";
+        disc.textContent = item.description;
 
-    pricing.appendChild(price);
+        const pricing = document.createElement("div");
+        pricing.className = "pricing";
+        const price = document.createElement("div");
+        price.className = "price";
+        price.textContent = item.price+" dh";
+        const cardFooter = document.createElement("div");
+        cardFooter.className = "card-footer";
+        const btn = document.createElement("button");
+        btn.className = "btn";
+        btn.textContent = "Order";
+        btn.addEventListener("click", () => handleOrderClick(item)); // Add click event listener
+        cardFooter.appendChild(btn);
 
-    card.appendChild(cardHeader);
-    card.appendChild(cardName);
-    card.appendChild(disc);
-    card.appendChild(pricing);
-    card.appendChild(cardFooter);
+        pricing.appendChild(price);
 
-    menuList.appendChild(card);
-});
+        card.appendChild(cardHeader);
+        card.appendChild(cardName);
+        card.appendChild(disc);
+        card.appendChild(pricing);
+        card.appendChild(cardFooter);
+
+        menuList.appendChild(card);
+    });
+}
+
+displayMenu(menuItems);
