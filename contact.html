@@ -10,39 +10,44 @@
     <link rel="stylesheet" href="css/standard.css">
     <link rel="stylesheet" href="css/responsive.css">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/f2acd83396.js" crossorigin="anonymous"></script>
     
 </head>
 <body>
     <header>
-        <div class="navbar" id="navbar" >
+        <div class="navbar" id="navbar">
             <div class="respo">
                 <a href="index.html"><img class="logo" src="images/Hitaka_logo.svg" alt="LOGO" width="70px"></a>
                 <div class="toggle" >
+                <div class="cart_icon">
                     <img src="images/assets/cartIcon.svg" alt="toggle" onclick="openCart()">
-                    <img src="images/assets/toggle.svg" alt="toggle" id="toggle">
+                    <div class="nb_items"></div>
+                </div>              
+                <img src="images/assets/toggle.svg" alt="toggle" id="toggle">
                 </div>
             </div>
-            
-            
             <ul class="navbaritems" id="navbaritems">
-                <li>
-                    <img src="images/assets/cartIcon.svg" alt="toggle" onclick="openCart()">
-                  </li>
+                <li class="cart_icon">
+                <img src="images/assets/cartIcon.svg" alt="toggle" onclick="openCart()">
+                <div class="nb_items"></div>
+                </li>
                 <li class="home"><a href="index.html">Home</a></li>
                 <li class="arder"><a href="order.html">Order</a> </li>
                 <li class="about"><a href="about.html">About</a> </li>
                 <li class="contact"><a href="contact.html">Contact</a></li>
             </ul>
-           
         </div>
         <div id="mySidebar" class="sidebar">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-            <div class="empty">
-                <img src="images/empty-cart.png" alt="">
-                <span>Oups No sushi found </span>
-                <div class="toOrder">
-                    <a href="order.html">Discover our menu</a>
-                </div>
+            <div class="japanese">
+                <img src="images/assets/japanese.svg" alt="Japanese">
+            </div>
+            <div class="empty" id="addedItems">
+            </div>
+            <div class="totalContainer">
+              <div id="total">
+              </div>
+              <button onclick="submitOrder()" id="submitOrder">Submit Order</button>
             </div>
           </div>
     </header>
@@ -105,5 +110,7 @@
 
     </footer>    
     <script src="javascript/script.js" ></script>
+    <script src="javascript/order.js"></script>
+
 </body>
 </html>
