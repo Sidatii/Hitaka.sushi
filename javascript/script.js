@@ -25,26 +25,6 @@ function ShowAllProducts() {
     }
 }
 
-function HideAllProducts() {
-    var allcards = document.getElementsByClassName('card');
-    for (let i = 0; i < allcards.length; i++) {
-        allcards[i].style.display = 'none'
-    }
-}
-
-function filterProduct(category){
-
-    if (category === 'all') {
-        ShowAllProducts()
-    }else{
-        HideAllProducts()
-          let chosencategory = document.getElementsByClassName(category);
-          for (let i = 0; i < chosencategory.length; i++) {
-            chosencategory[i].style.display = 'grid'
-        }
-    }
-}
-
 
 function openCart(){
     document.getElementById("mySidebar").style.width = "350px";
