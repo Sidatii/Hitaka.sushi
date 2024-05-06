@@ -47,31 +47,18 @@
           </div>
     </header>
 
-    <div class="reach">
-        Reach out to us
-    </div>
     <div class="op-contact">
-        <form class="contact_container">
-            <div class="fst">
-                <div class="details">
-                    <label for="full_name">Full Name</label>
-                    <input type="text" class="fname" name="fullname" placeholder="Your full name...">
-                    <label for="text">Phone number</label>
-                    <input type="text" class="phone-num" name="phone-number" placeholder="Your phone number...">
-                    <label for="email">Email</label>
-                    <input type="email" class="email" name="email" placeholder="Your email...">
-                </div>
-                
-                <div class="message">
-                    <label for="message">Message</label> 
-                    <textarea id="message" name="message1" placeholder="Write something.."></textarea>
-                </div>
-            </div>
-        
-            <div class="snd">
-            <button class="submit" type="button" value="SUBMIT" onclick="submitConfirmation()">Submit</button>
-            </div>
-        </form>
+        <div class="reach">
+            Reach out to us
+        </div>
+        <div class="contact-form">
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
           
     </div>
 

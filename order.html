@@ -25,8 +25,9 @@
           </div>
       </div>
         <ul class="navbaritems" id="navbaritems">
-          <li>
+          <li class="cart_icon">
             <img src="images/assets/cartIcon.svg" alt="toggle" onclick="openCart()">
+            <div id="nb_items"></div>
           </li>
           <li class="home"><a href="index.html">Home</a></li>
           <li class="arder"><a href="order.html">Order</a> </li>
@@ -36,12 +37,12 @@
       </div>
       <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <div class="empty">
-            <img src="images/empty-cart.png" alt="">
-            <span>Oups No sushi found </span>
-            <div class="toOrder">
-                <a href="order.html">Discover our menu</a>
-            </div>
+        <div class="empty" id="addedItems">
+        </div>
+        <div class="totalContainer">
+          <div id="total">
+          </div>
+          <button onclick="submitOrder()" id="submitOrder">Submit Order</button>
         </div>
       </div>
     </header>
@@ -70,115 +71,8 @@
     </di>
     
     <div class="order-box">
-      <div class="card-grid">
-        <div class="card card-shadow sushi">
-          <div class="card-header card-image">
-            <img src="images/img1.png" />
-          </div>
-          <div class="card-name">Sushi 1tho</div>
-          <div class="disc">Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Eos deleniti saepe, sunt numquam ab sit.</div>
-          <div class="price">320 dh</div>
-          <div class="card-footer">
-            <button class="btn">Add to card</button>
-          </div>
-        </div>
-        <div class="card card-shadow sushi">
-          <div class="card-header card-image">
-            <img class="cardImg" src="images/img2.png" />
-          </div>
-          <div class="card-name">Sushi 22</div>
-          <div class="disc">Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Eos deleniti saepe, sunt numquam ab sit.</div>
-          <div class="price">320 dh</div>
-          <div class="card-footer">
-            <button class="btn">Add to card</button>
-          </div>
-        </div>
-        <div class="card card-shadow sushi">
-          <div class="card-header card-image">
-            <img class="cardImg" src="images/img3.png" />
-          </div>
-          <div class="card-name">Sushi 33</div>
-          <div class="disc">Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Eos deleniti saepe, sunt numquam ab sit.</div>
-          <div class="price">320 dh</div>
-          <div class="card-footer">
-            <button class="btn">Add to card</button>
-          </div>
-        </div>
-        <div class="card card-shadow tuna">
-          <div class="card-header card-image">
-            <img class="cardImg" src="images/img4.png" />
-          </div>
-          <div class="card-name">Salade</div>
-          <div class="disc">Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Eos deleniti saepe, sunt numquam ab sit.</div>
-          <div class="price">320 dh</div>
-          <div class="card-footer">
-            <button class="btn">Add to card</button>
-          </div>
-        </div>
-        <div class="card card-shadow ramen">
-          <div class="card-header card-image">
-            <img class="cardImg" src="images/img5.png" />
-          </div>
-          <div class="card-name">Sushi 44</div>
-          <div class="disc">Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Eos deleniti saepe, sunt numquam ab sit.</div>
-          <div class="price">320 dh</div>
-          <div class="card-footer">
-            <button class="btn">Add to card</button>
-          </div>
-        </div>
-        <div class="card card-shadow rice">
-          <div class="card-header card-image">
-            <img class="cardImg" src="images/img6.png" />
-          </div>
-          <div class="card-name">Sushi 55</div>
-          <div class="disc">Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Eos deleniti saepe, sunt numquam ab sit.</div>
-          <div class="price">320 dh</div>
-          <div class="card-footer">
-            <button class="btn">Add to card</button>
-          </div>
-        </div>
-        <div class="card card-shadow tuna">
-          <div class="card-header card-image">
-            <img class="cardImg" src="images/img7.png" />
-          </div>
-          <div class="card-name">Sushi 66</div>
-          <div class="disc">Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Eos deleniti saepe, sunt numquam ab sit.</div>
-          <div class="price">320 dh</div>
-          <div class="card-footer">
-            <button class="btn">Add to card</button>
-          </div>
-        </div>
-        <div class="card card-shadow rice" id="sushi">
-          <div class="card-header card-image">
-            <img class="cardImg" src="images/img8.png" />
-          </div>
-          <div class="card-name">Salade 22</div>
-          <div class="disc">Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Eos deleniti saepe, sunt numquam ab sit.</div>
-          <div class="price">320 dh</div>
-          <div class="card-footer">
-            <button class="btn">Add to card</button>
-          </div>
-        </div>
-        <div class="card card-shadow ramen" >
-          <div class="card-header card-image">
-            <img class="cardImg" src="images/img9.png"/>
-          </div>
-          <div class="card-name">Sidatii</div>
-          <div class="disc">Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Eos deleniti saepe, sunt numquam ab sit.</div>
-          <div class="price">320 dh</div>
-          <div class="card-footer">
-            <button class="btn">Add to card</button>
-          </div>
-        </div>
+      <div class="card-grid" id="menu"></div>
+        
       </div>
       <div class="japanese">
         <img src="images/assets/japanese.svg" alt="Japanese">
@@ -244,5 +138,6 @@
 
     </footer>
     <script src="javascript/script.js"></script>
+    <script src="javascript/order.js"></script>
   </body>
 </html>
